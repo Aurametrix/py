@@ -13,6 +13,7 @@
 # limitations under the License.
 
 import os
+import datetime
 
 from google.appengine.api import users
 
@@ -37,6 +38,13 @@ class GiftForm(djangoforms.ModelForm):
   class Meta:
     model = Gift
     exclude = ['giver', 'created', 'modified']
+
+
+def current_datetime(request):
+    now = datetime.datetime.now()
+    html = "<html><body>It is now %s.</body></html>" % now
+    return HttpResponse(html)
+
 
 def respond(request, user, template, params=None):
   """Helper to render a response, passing standard stuff to the response.
