@@ -45,6 +45,8 @@ def current_datetime(request):
     html = "<html><body>It is now %s.</body></html>" % now
     return HttpResponse(html)
 
+p.question
+"What's up?"
 
 def respond(request, user, template, params=None):
   """Helper to render a response, passing standard stuff to the response.
@@ -92,7 +94,7 @@ def edit(request, gift_id):
   if gift_id:
     gift = Gift.get(db.Key.from_path(Gift.kind(), int(gift_id)))
     if gift is None:
-      return http.HttpResponseNotFound('No gift exists with that key (%r)' %
+      return http.HttpResponseNotFound('There are no gifts with that key (%r)' %
                                        gift_id)
 
   form = GiftForm(data=request.POST or None, instance=gift)
