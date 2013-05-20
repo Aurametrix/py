@@ -45,9 +45,6 @@ def current_datetime(request):
     html = "<html><body>It is now %s.</body></html>" % now
     return HttpResponse(html)
 
-p.question
-"What's up?"
-
 def respond(request, user, template, params=None):
   """Helper to render a response, passing standard stuff to the response.
 
