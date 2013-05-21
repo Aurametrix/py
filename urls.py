@@ -15,6 +15,9 @@
 
 from django.conf.urls.defaults import *
 
+STATIC_URL = '/static/'
+
+
 urlpatterns = patterns(
     '',
     (r'^$', 'views.index'),
