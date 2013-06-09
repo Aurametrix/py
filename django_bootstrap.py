@@ -47,10 +47,17 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 # little dance, courtesy of Google third-party versioning hacks.  Note
 # that this patches up sys.modules, so all other code can just use
 # "from django import forms" etc.
-try:
-  from django import v0_96 as django
-except ImportError:
-  pass
+
+import os
+os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
+
+from google.appengine.dist import use_library
+use_library('django', '1.2')
+
+#try:
+#  from django import v0_96 as django
+#except ImportError:
+#  pass
 
 # Import the part of Django that we use here.
 import django.core.handlers.wsgi
