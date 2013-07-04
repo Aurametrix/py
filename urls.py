@@ -1,3 +1,4 @@
+# modified 2013
 # Copyright 2008 Google Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,5 +23,5 @@ urlpatterns = patterns(
     '',
     (r'^$', 'views.index'),
     (r'^new$', 'views.new'),
-    (r'^edit/(\d+)$', 'views.edit'),
+    (r'^edit/(\d*)$', 'views.edit'),
     )
