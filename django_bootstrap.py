@@ -54,20 +54,8 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 from google.appengine.dist import use_library
 use_library('django', '1.2')
 
-#try:
-#  from django import v0_96 as django
-#except ImportError:
-#  pass
 
 # Import the part of Django that we use here.
 import django.core.handlers.wsgi
-
-def main():
-  # Create a Django application for WSGI.
-  application = django.core.handlers.wsgi.WSGIHandler()
-
-  # Run the WSGI CGI handler with that application.
-  util.run_wsgi_app(application)
-
-if __name__ == '__main__':
-  main()
+application = django.core.handlers.wsgi.WSGIHandler()
+#move WSGI application object to the global scope for python 27
