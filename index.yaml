@@ -10,7 +10,30 @@ indexes:
 # automatically uploaded to the admin console when you next deploy
 # your application using appcfg.py.
 
+- kind: Cat
+  properties:
+  - name: name
+  - name: age
+    direction: desc
+
+- kind: Cat
+  properties:
+  - name: name
+  - name: whiskers
+    direction: desc
+
 - kind: Gift
   properties:
   - name: created
     direction: desc
+
+- kind: Store
+  ancestor: yes
+  properties:
+  - name: business
+  - name: owner
+
+# kind is typically the name of the model class that defines the model for the entities
+# properties are columns in order to be sorted
+# name is the datastore name of the property
+# direction is the direction to sort, asc is default
