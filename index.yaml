@@ -22,18 +22,8 @@ indexes:
   - name: whiskers
     direction: desc
 
-- kind: Gift
-  properties:
-  - name: created
-    direction: desc
-
 - kind: Store
   ancestor: yes
   properties:
   - name: business
   - name: owner
-
-# kind is typically the name of the model class that defines the model for the entities
-# properties are columns in order to be sorted
-# name is the datastore name of the property
-# direction is the direction to sort, asc is default
