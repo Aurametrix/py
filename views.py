@@ -18,7 +18,7 @@ import datetime
 from google.appengine.api import users
 
 from google.appengine.ext import db
-from google.appengine.ext.db import djangoforms
+import djangoforms
 
 import django
 from django import http
