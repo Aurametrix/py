@@ -50,8 +50,7 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 
 import os
 os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
-
-
+from google.appengine.ext.webapp import template
 
 # Import the part of Django that we use here.
 import django.core.handlers.wsgi
