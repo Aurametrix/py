@@ -22,6 +22,11 @@ indexes:
   - name: whiskers
     direction: desc
 
+- kind: Gift
+  properties:
+  - name: created
+    direction: desc
+
 - kind: Store
   ancestor: yes
   properties:
