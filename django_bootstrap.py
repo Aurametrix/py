@@ -24,6 +24,7 @@ directly -- everything else is controlled from there.
 # Standard Python imports.
 import os
 import sys
+import urllib
 import logging
 import __builtin__
 
@@ -48,9 +49,14 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 # that this patches up sys.modules, so all other code can just use
 # "from django import forms" etc.
 
-import os
+import jinja2
+import webapp2
 os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
-from google.appengine.ext.webapp import template
+#from google.appengine.ext.webapp2 import template
+
+#JINJA_ENVIRONMENT = jinja2.Environment(
+#    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
+#    extensions=['jinja2.ext.autoescape'])
 
 # Import the part of Django that we use here.
 import django.core.handlers.wsgi
