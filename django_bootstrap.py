@@ -57,7 +57,9 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 #JINJA_ENVIRONMENT = jinja2.Environment(
 #    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
 #    extensions=['jinja2.ext.autoescape'])
-
+#template = JINJA_ENVIRONMENT.get_template('index.html')
+#        self.response.write(template.render(template_values))
+        
 # Import the part of Django that we use here.
 import django.core.handlers.wsgi
 application = django.core.handlers.wsgi.WSGIHandler()
