@@ -23,5 +23,5 @@ urlpatterns = patterns(
     '',
     (r'^$', 'views.index'),
     (r'^new$', 'views.new'),
-    (r'^edit/(\d+)$', 'views.edit'),
+    (r'^edit/(\d*)$', 'views.edit'),
     )
