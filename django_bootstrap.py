@@ -42,24 +42,12 @@ logging.getLogger().setLevel(logging.INFO)
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 
 # Must set this env var *before* importing any part of Django.
-os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
-
 # Make sure we can import Django.  We may end up needing to do this
 # little dance, courtesy of Google third-party versioning hacks.  Note
 # that this patches up sys.modules, so all other code can just use
 # "from django import forms" etc.
-
-import jinja2
-import webapp2
 os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
-#from google.appengine.ext.webapp2 import template
 
-#JINJA_ENVIRONMENT = jinja2.Environment(
-#    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
-#    extensions=['jinja2.ext.autoescape'])
-#template = JINJA_ENVIRONMENT.get_template('index.html')
-#        self.response.write(template.render(template_values))
-        
 # Import the part of Django that we use here.
 import django.core.handlers.wsgi
 application = django.core.handlers.wsgi.WSGIHandler()
