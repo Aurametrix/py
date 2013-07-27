@@ -1,6 +1,6 @@
 Simple Google App Engine Application
 ====================================
-Moving from Python 2.5 to Python 2.7
+Migrated from Python 2.5 to Python 2.7
 
 Replace the WSGI CGI handler => 
                 script: django_bootstrap.application 
@@ -16,13 +16,10 @@ Python 2.7 configuration requires third-party libraries specified in app.yaml:
 
 libraries:
 - name: django
-  version: "1.2"
-- name: webapp2
-  version: "2.5.2"
+  version: "1.3"
   
-  google.appengine.dist and djangoforms are no longer supported
+google.appengine.dist and djangoforms are no longer supported
   
-  Also, make sure Authentication Type is correct in Application Settings - 
-  otherwise the following can happen: 
-Exception Type:	NotAllowedError
-Exception Location:	/../appengine/api/users.py in create_login_url, line 256
+Authentication Type should be set properly in Application Settings, otherwise expect:  
+    Exception Type:	NotAllowedError
+    Exception Location:	/../appengine/api/users.py in create_login_url, line 256
