@@ -1,8 +1,14 @@
 {%extends "base.html"%}
 {%block body%}
 <h2>Welcome to the Gift Boutique</h2>
+<p>
+{% load static %}
+<img src="../static/jonagoldapple.jpg" width=128 height=128></img>
+<p>
 
 List of Gifts:
+
+
 <ul>
 {%for gift in gifts%}
 <li>
