@@ -16,6 +16,13 @@ handlers:
   script: django_bootstrap.application
 
 
+- url: /(.*\.(gif|png|jpg))
+  static_files: static/\1
+  upload: static/(.*\.(gif|png|jpg))
+
+
+
+
 libraries:
 - name: django
   version: "1.3"
